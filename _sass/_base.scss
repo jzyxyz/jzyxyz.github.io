@@ -1,0 +1,16 @@
+$header-height: 360px;
+$header-banner-height: 300px;
+$shallow-color: #fff;
+$dark-color: #292f36;
+$link-color:#a9abae;
+$monospace-stack: 'Courier New', Courier, monospace;
+$sans-serif-stack: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$text-size: 1rem;
+$serif-stack: 'Times New Roman', Times, serif;
+$navbar-height: 60px;
+$spacing-unit:1rem;
+%clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
