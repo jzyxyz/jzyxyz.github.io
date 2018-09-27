@@ -1,8 +1,13 @@
 @import "_base";
 body { margin:0px; padding:0px; }
+// set defaults
+
 /**
  * Site header
  */
+ %shadow-effect{
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+ }
 
 .site-header {
   height: $header-height;
@@ -35,6 +40,7 @@ body { margin:0px; padding:0px; }
   top: 0;
   left: 0;
   width: 100%; 
+  @extend %shadow-effect;
 }
 .visible-title {
   visibility: visible;
@@ -45,6 +51,7 @@ nav {
   height: $navbar-height;
   background: $dark-color;
   z-index: 10;
+  @extend %shadow-effect;
   div{
     color: $shallow-color;
     font-size: $text-size*2;
@@ -105,107 +112,95 @@ li a:hover::before{
 /**
  * Site footer
  */
+$footer-height: 2rem;
 .site-footer {
-  border-top: 1px solid $dark-color;
-  padding: $spacing-unit 0;
+  font-size: 1rem;
+  height: fit-content;
+  background-color: $dark-color;
+  width: -webkit-fill-available;
+  font-family: $monospace-stack;
+  font-size: 1rem;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  p{
+    text-align: center;
+    color: $shallow-color;
+    margin: 0.25rem 3rem;
+    line-height: 1.5rem;
+
+    i {
+      position: relative;
+      top: 5px;
+    }
+  }
 }
 
-.footer-heading {
-  margin-bottom: $spacing-unit / 2;
+
+
+
+
+
+
+/**
+ * Page content
+ */
+.page-content {
+  padding: 0;
+  margin: 0;
+  flex: 1 0 auto;
+  font-family: $sans-serif-stack;
+  font-size: $text-size;
 }
 
-.contact-list,
-.social-media-list {
-  list-style: none;
-  margin-left: 0;
-}
-
-.footer-col-wrapper {
-  color: $dark-color;
-  margin-left: -$spacing-unit / 2;
-  @extend %clearfix;
-}
-
-.footer-col {
+%pannel{
+  display: block;
   float: left;
-  margin-bottom: $spacing-unit / 2;
-  padding-left: $spacing-unit / 2;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+  height: -webkit-fill-available;
+  position: relative;
+  cursor: pointer;
+
+  .pannel-content{
+    height: -webkit-fill-available
+  }
+}
+.pannel-backside, .pannel-frontside{
+  text-align: center;
+  font-size: 5rem;
+  font-family: $monospace-stack;
+  height: 100%;
+  position: relative;
+  top: 30%;
+  visibility: visible;
 }
 
-.footer-col-1 {
-  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-  width:         calc(35% - (#{$spacing-unit} / 2));
+.pannel-frontside{
+  visibility: hidden;
 }
-
-.footer-col-2 {
-  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-  width:         calc(20% - (#{$spacing-unit} / 2));
+#pannel1{
+  @extend %pannel;
+  background-color: $pannel-color-1;
 }
-
-.footer-col-3 {
-  width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-  width:         calc(45% - (#{$spacing-unit} / 2));
+#pannel2{
+  @extend %pannel;
+  background-color: $pannel-color-2;
 }
-
-// @include media-query($on-laptop) {
-//   .footer-col-1,
-//   .footer-col-2 {
-//     width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-//     width:         calc(50% - (#{$spacing-unit} / 2));
-//   }
-
-//   .footer-col-3 {
-//     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-//     width:         calc(100% - (#{$spacing-unit} / 2));
-//   }
-// }
-
-// @include media-query($on-palm) {
-//   .footer-col {
-//     float: none;
-//     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-//     width:         calc(100% - (#{$spacing-unit} / 2));
-//   }
-// }
-
-
-
-// /**
-//  * Page content
-//  */
-// .page-content {
-//   padding: $spacing-unit 0;
-//   flex: 1 0 auto;
-// }
-
-// .page-heading {
-//   @include relative-font-size(2);
-// }
-
-// .post-list-heading {
-//   @include relative-font-size(1.75);
-// }
-
-// .post-list {
-//   margin-left: 0;
-//   list-style: none;
-
-//   > li {
-//     margin-bottom: $spacing-unit;
-//   }
-// }
-
-// .post-meta {
-//   font-size: $small-font-size;
-//   color: $grey-color;
-// }
-
-// .post-link {
-//   display: block;
-//   @include relative-font-size(1.5);
-// }
-
-
+#pannel3{
+  @extend %pannel;
+  background-color: $pannel-color-3;
+}
+#pannel4{
+  @extend %pannel;
+  background-color: $pannel-color-4;
+}
+#pannel5{
+  @extend %pannel;
+  background-color: $pannel-color-5;
+}
 
 // /**
 //  * Posts

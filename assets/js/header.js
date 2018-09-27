@@ -10,3 +10,4 @@ $(window).scroll(function(){
         $('nav div').removeClass('visible-title')
     }
 })
+
