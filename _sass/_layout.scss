@@ -49,19 +49,45 @@ body { margin:0px; padding:0px; height: -webkit-fill-available;}
     cursor: wait;
     animation-play-state: paused;
   }
-  
-  h1{
-    background-color: rgba($color: $pannel-color-1, $alpha: 0.7);
-    color: $shallow-color;
-    position: absolute;
-    top: 2rem; 
-    left: 2rem;
-    font-family: $monospace-stack;
-    padding: 0 0.5rem;
-    line-height: 2.5rem;
-  }
-  
 }
+
+.banner-name{
+  color: $shallow-color;
+  position: absolute;
+  top: 2rem; 
+  left: 2rem;
+  font-family: $monospace-stack;
+}
+  
+h1{
+  background-color: rgba($color: $pannel-color-1, $alpha: 0.8);
+  line-height: 2.5rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.social-media-list{
+  list-style-type: none;
+  padding: 0.25rem;
+  li{
+    background-color: rgba($color: $pannel-color-2, $alpha: 0.8);
+    line-height: 2rem;
+    margin: 0.5rem 0;
+    letter-spacing: 0.5px;
+    font-size: 2rem;
+    transition: all .1s ease-in-out;
+    &:hover{
+      transform: scale(1.05)
+      }
+
+  }
+}
+
+.fab{
+  font-size: 1.3rem;
+  padding: 10px;
+}
+
+
 
 .site-fixed-header {
   position: fixed;
