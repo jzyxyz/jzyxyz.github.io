@@ -11,3 +11,12 @@ $(window).scroll(function(){
     }
 })
 
+$(document).ready(
+    ()=>{
+        $(".unfocused-pannel").click(
+            ()=>{
+                $(".focused-pannel").removeClass("focused-pannel").addClass("unfocused-pannel");
+                $(this).removeClass("unfocused-pannel").addClass("focused-pannel")
+        })
+    }
+)

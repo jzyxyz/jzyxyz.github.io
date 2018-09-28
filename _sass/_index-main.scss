@@ -1,0 +1,60 @@
+@import "_base";
+%pannel{
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  height: -webkit-fill-available;
+  position: relative;
+  // box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+}
+
+.pannel-backside, .pannel-frontside{
+  font-size: 1.25rem;
+  font-family: $sans-serif-stack;
+  position: relative;
+  top: 15%;  
+  width: 70%;
+  margin: auto;
+  color: rgba($color: $shallow-color, $alpha: 0.9)
+}
+
+.pannel-backside{
+  display: none;
+}
+#pannel1{
+  @extend %pannel;
+  background-color: $pannel-color-1;
+}
+#pannel2{
+  @extend %pannel;
+  background-color: $pannel-color-2;
+}
+#pannel3{
+  @extend %pannel;
+  background-color: $pannel-color-3;
+}
+#pannel4{
+  @extend %pannel;
+  background-color: $pannel-color-4;
+}
+#pannel5{
+  @extend %pannel;
+  background-color: $pannel-color-5;
+}
+
+ 
+.focused-pannel{
+  width: 68%;
+  opacity: 0.9;
+}
+.unfocused-pannel{
+  width: 8%;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  &:hover{
+      opacity: 0.9;
+      transform: scaleX(1.1); 
+  }
+}
