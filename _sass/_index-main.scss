@@ -39,9 +39,6 @@
         padding: 0.25rem;
         width: fit-content;
     }
-    p{
-        color: rgba($color: $pannel-color-1, $alpha: 1)
-    };
 }
 .txt-wrapper{
     padding: 3rem 6rem;
@@ -50,6 +47,7 @@
     height:10em; 
     margin-top:-5em; 
     width: 100%;
+    color: rgba($color: $pannel-color-1, $alpha: 1)
 }
 .content .txt-wrapper{
     color: $dark-color;

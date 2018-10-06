@@ -96,7 +96,6 @@ nav {
       li { 
         display: inline-block; 
         line-height: $navbar-height;
-        letter-spacing: 1px;
         font-weight: bold;
         &:not(:last-child){
           margin-right: 2rem;

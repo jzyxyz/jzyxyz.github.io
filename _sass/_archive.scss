@@ -1,0 +1,94 @@
+.archive {
+    padding: 0 5rem;
+}
+.timeline {
+    font-family: $serif-stack;
+    position: relative;
+    padding: 100px 50px; 
+}
+.timeline {
+    &::before {
+        content: "";
+        border-left: 4px solid rgba($color: $pannel-color-2 , $alpha: 1);
+        position: absolute;
+        top: 0;
+        left: 18%;
+        height: 100%;
+    }
+}
+
+$card-thumb-height: 200px;
+.date-block{
+    z-index: -2;
+    top: 37px;
+    position: relative;
+    width: 400px;
+    font-size: 1rem;
+    font-family: $serif-stack;
+    background-color: rgba($color: $pannel-color-2 , $alpha: 1);
+    padding: .5rem 1rem;
+    color: $shallow-color;
+
+}
+
+.digest-card{
+    position: absolute;
+    left: 20%;
+    margin-right: 50px;
+}
+.card-img{
+    min-height: $card-thumb-height;
+    text-align: center;
+    h3{
+        margin: 5rem;
+        color: $shallow-color;
+    }
+}
+.card-inner {
+    background-color: rgba($color: $pannel-color-1 , $alpha: .8);
+    padding: 2rem;
+
+}
+.card-title {
+    height: $card-thumb-height;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    font-family: $monospace-stack;
+
+}
+.card-text-wrapper{
+    color: $shallow-color;
+}
+#digest-card-1 .card-img{
+    background: url(http://static.simpledesktops.com/uploads/desktops/2015/10/18/hoverboard_simple.png);
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+}
+
+#digest-card-2 .card-img{
+    background: url(http://static.simpledesktops.com/uploads/desktops/2011/11/11/mushroom.png);
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+}
+
+#digest-card-3 .card-img{
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+    background-image: url(http://static.simpledesktops.com/uploads/desktops/2011/11/07/cubechaos2.png)
+}
+
+#digest-card-4 .card-img{
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+    background-image: url(http://static.simpledesktops.com/uploads/desktops/2011/06/04/Friendship.png)
+}
+@media (max-width: 1000px) {
+  
+    .date-block{
+        display: none;
+    }
+  }
