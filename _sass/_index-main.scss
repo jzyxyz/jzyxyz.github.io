@@ -1,60 +1,95 @@
-@import "_base";
-%pannel{
-  display: block;
-  float: left;
-  margin: 0;
-  padding: 0;
-  height: -webkit-fill-available;
-  position: relative;
-  // box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+.home {
+    color: $shallow-color;
+    font-family: $serif-stack;
 }
 
-.pannel-backside, .pannel-frontside{
-  font-size: 1.25rem;
-  font-family: $sans-serif-stack;
-  position: relative;
-  top: 15%;  
-  width: 70%;
-  margin: auto;
-  color: rgba($color: $shallow-color, $alpha: 0.9)
-}
-
-.pannel-backside{
-  display: none;
-}
-#pannel1{
-  @extend %pannel;
-  background-color: $pannel-color-1;
-}
-#pannel2{
-  @extend %pannel;
-  background-color: $pannel-color-2;
-}
-#pannel3{
-  @extend %pannel;
-  background-color: $pannel-color-3;
-}
-#pannel4{
-  @extend %pannel;
-  background-color: $pannel-color-4;
-}
-#pannel5{
-  @extend %pannel;
-  background-color: $pannel-color-5;
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
  
-.focused-pannel{
-  width: 68%;
-  opacity: 0.9;
+#intro1{
+    background: url(http://static.simpledesktops.com/uploads/desktops/2018/03/31/Nesting_Dolls.png);
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
 }
-.unfocused-pannel{
-  width: 8%;
-  opacity: 0.8;
-  cursor: pointer;
-  transition: all .2s ease-in-out;
-  &:hover{
-      opacity: 0.9;
-      transform: scaleX(1.1); 
+#intro2{background: url(http://static.simpledesktops.com/uploads/desktops/2015/02/26/Corporate_Sunrise.png);
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+}
+.intro .inner {
+    min-height: 250px;
+    background: rgba(0,0,0,0.7) ;
+}
+
+.content .inner{
+    min-height:600px;     
+}
+
+.inner {
+    position: relative;
+    h1 {
+        letter-spacing: 1.5px;
+        color: $shallow-color;
+        background-color: rgba($color: $pannel-color-2, $alpha: 0.8);
+        padding: 0.25rem;
+        width: fit-content;
+    }
+    p{
+        color: rgba($color: $pannel-color-1, $alpha: 1)
+    };
+}
+.txt-wrapper{
+    padding: 3rem 6rem;
+    position:absolute; 
+    top:50%; 
+    height:10em; 
+    margin-top:-5em; 
+    width: 100%;
+}
+.content .txt-wrapper{
+    color: $dark-color;
+    word-wrap: break-word;
+    width: 80%;
+    margin-top: -16rem;
+}
+
+.quote::before {
+    content: " \" ";
+}
+.quote::after {
+    content: " \" ";
+}
+.from-author {
+    text-align: right;
+    padding-right: 5rem;
+}
+.from-author::before{
+    content: "--"
+}
+
+@media (max-width: 815px) {
+  
+    .txt-wrapper{
+        padding: 2rem;
+        position:absolute; 
+        top:50%; 
+        height:10em; 
+        margin-top:-5em; 
+        width: 100%;
+    }
+    .content .txt-wrapper{
+        width: 100%;
+        margin-top: -14rem;
+    }
+    #intro1{
+        background: url(http://static.simpledesktops.com/uploads/desktops/2011/05/13/Invaders.png);
+        background-size:cover;
+        background-position:center center;
+        background-attachment:fixed;
+    }
   }
-}

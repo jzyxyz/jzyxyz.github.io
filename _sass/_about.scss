@@ -1,0 +1,105 @@
+a.arrow::before {
+  position: relative;
+  top: 6px;
+  content:"";
+  transition: ease .5s;
+  color: $pannel-color-2;
+}
+
+a.arrow:hover::before {
+  content:"↗";
+  font-size: 1.5rem;
+  color: $pannel-color-2;
+  transition: ease .5s;
+}
+
+
+.container {
+  padding: 20px;
+  font-family: $serif-stack;
+  letter-spacing: 1.2px;
+}
+
+.item {
+  margin: 20px 0;
+}
+
+h2 {
+  color: $pannel-color-2;
+  font-weight: 700;
+  border-bottom: 5px solid $pannel-color-2;
+  display: inline-block;
+  line-height: 40px;
+  margin-top: 28px;
+  margin-bottom: 0;
+}
+
+.rule {
+  box-sizing: border-box;
+  height: 1px;
+  background: $pannel-color-2;
+}
+
+h3 {
+  
+  color: rgba($color: $dark-color, $alpha: .8);
+  font-weight: 700;
+  margin-top: 20px;
+  line-height: 28px;
+}
+
+
+h4 ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  color: rgba($color: $pannel-color-1, $alpha: 1);
+  
+}
+
+h5 {
+  font-size: 10px;
+  color: $pannel-color-2;
+  margin-top: 0;
+  line-height: 32px;
+  letter-spacing: 0.5px;
+}
+
+
+
+
+
+@media (min-width: 645px) {
+  
+  body, h1, h2, h3, h4 {
+    font-size: 24px;
+  }
+  
+  
+  .container {
+    width: 85%;
+    margin: 0 auto;
+  }
+  
+  h5 {
+    font-size: 12px;
+  }
+  
+  h3, h4 {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+  }
+    
+  h4 ul {
+    margin-right: 48px;
+  }
+  
+  h4 li {
+    padding: 0 0 12px 0;
+  }
+  
+}

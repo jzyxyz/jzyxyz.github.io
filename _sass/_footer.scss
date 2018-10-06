@@ -1,0 +1,34 @@
+.site-footer {
+  font-size: 1rem;
+  padding: $padding-unit * 4;
+  background-color: $pannel-color-1;
+  width: -webkit-fill-available;
+  font-family: $serif-stack;
+  z-index: 10;
+  color: $shallow-color;
+  
+}
+.site-footer > p{
+  text-align: center;
+
+  i {
+    position: relative;
+    top: 5px;
+  }
+}
+.site-footer > p:hover{
+  i {
+    transition-timing-function: ease-in;
+    animation: color-transition 1s alternate;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode:forwards;
+    @keyframes  color-transition{
+      0%{
+        color: $shallow-color;
+      }
+      100%{
+        color: $pannel-color-2;
+      }
+    }
+  }
+}  

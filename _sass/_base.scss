@@ -3,12 +3,14 @@ $header-banner-height: 300px;
 $shallow-color: #fff;
 $dark-color: #292f36;
 $link-color:#a9abae;
-$monospace-stack: 'Courier New', Courier, monospace;
-$sans-serif-stack: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$monospace-stack: 'Roboto Mono', monospace;
+$sans-serif-stack: 'Roboto', sans-serif;
 $text-size: 1rem;
-$serif-stack: 'Times New Roman', Times, serif;
+$padding-unit: 0.25rem;
+$serif-stack: 'Roboto Slab', serif;
 $navbar-height: 60px;
 $spacing-unit:1rem;
+$footer-height: 2rem;
 %clearfix:after {
     content: "";
     display: table;
@@ -22,3 +24,19 @@ $pannel-color-2: #EE836F;
 $pannel-color-3: #00A3AF;
 $pannel-color-4: #DCD3B2;
 $pannel-color-5: #DCCB18;
+*::selection{
+   color: rgba($color: $pannel-color-3, $alpha: 1.0);
+   background-color: rgba($color: $pannel-color-3, $alpha: 0.1)
+  
+}
+$letter-spacing-unit: 0.05rem;
+a {
+  text-decoration: none; 
+  color: $shallow-color;
+  cursor: pointer;
+  font-size: $text-size;  
+  font-family: inherit;
+}
+a.highlight{
+  color: $pannel-color-2 !important
+}

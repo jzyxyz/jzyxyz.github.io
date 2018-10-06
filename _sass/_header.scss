@@ -1,0 +1,129 @@
+@import "_base";
+.site-header {
+    height: $header-height;
+    z-index: 10;
+}
+.site-header-banner{
+    background-color: rgba($color: $pannel-color-1, $alpha: 0.8);
+    // background:url(http://static.simpledesktops.com/uploads/desktops/2013/05/21/Backgrounds.png);
+    // background: url(http://static.simpledesktops.com/uploads/desktops/2018/03/31/Nesting_Dolls.png);
+    background-size:cover;
+    background-position:center center;
+    height: $header-banner-height;
+    width: 100%;
+    // &:before {
+    //   content: '';
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    // left: 0;
+    // background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+    // height: 300px;
+    // }
+}
+.banner-name{
+    color: $shallow-color;
+    position: absolute;
+    top: 2rem; 
+    left: 6rem;
+    font-family: $serif-stack;
+    letter-spacing: 1.5px;
+    h1{
+        background-color: rgba($color: $pannel-color-1, $alpha: 0.9);
+        padding: 0.25rem 0.5rem;
+    }
+      
+}
+    
+
+.social-media-list{
+    list-style-type: none;
+    padding: $padding-unit;
+    font-size: $text-size;
+    font-family: $monospace-stack;
+    letter-spacing: initial;
+    font-weight: bold;
+    li{
+      background-color: rgba($color: $pannel-color-2, $alpha: 0.8);
+      margin: $padding-unit*2 0;
+      transition: all .1s ease-in-out;
+      &:hover{
+        transform: scale(1.05)
+        }
+    }
+}
+  
+  .fab{
+    font-size: 1.3rem;
+    padding: 10px;
+  }
+  
+  
+  
+.site-fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    @extend %shadow-effect;
+    background-color: rgba($color: $pannel-color-1, $alpha: 1)
+}
+.visible-title {
+    visibility: visible;
+}
+  
+nav {
+    height: $navbar-height;
+    background: rgba($color: $pannel-color-1, $alpha: 0.8);
+    z-index: 10;
+    font-family: $monospace-stack;
+    div{
+      line-height: $navbar-height;
+      position: absolute;
+      top: 0;
+      left: 2%;
+      visibility: hidden;
+      a{
+        position: relative;
+        top: 5px;
+      }
+    }
+    ul { 
+      text-align: right;
+      margin: 0;
+      padding: 0 2rem;
+      li { 
+        display: inline-block; 
+        line-height: $navbar-height;
+        letter-spacing: 1px;
+        font-weight: bold;
+        &:not(:last-child){
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+
+  li.page-link a {
+    position: relative;
+  }
+  li.page-link a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -8px;
+    left: 0;
+    background-color: $pannel-color-2;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  li.page-link a:hover::before{
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }

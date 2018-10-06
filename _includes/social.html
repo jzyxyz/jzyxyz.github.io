@@ -1,12 +1,13 @@
 <ul class="social-media-list">
-  {%- if site.social.github_username -%}<li><i
-    class="fab fa-github"></i>
-    <a href="https://github.com/{{ site.social.github_username| cgi_escape | escape }}">
-    <span class="username">{{ site.social.github_username| escape }}</span></a></li>{%- endif
-  -%}
-  {%- if site.social.instagram_username -%}<li><i
-    class="fab fa-instagram"></i>
-    <a href="https://www.instagram.com/{{ site.social.instagram_username| cgi_escape | escape }}"><span class="username">{{ site.social.instagram_username| escape }}</span></a></li>{%- endif
-  -%}
+  {%- if site.social.github_username -%}
+  <a href="https://github.com/{{ site.social.github_username| cgi_escape | escape }}">
+    <li><i class="fab fa-github"></i> <span class="username">{{ site.social.github_username| escape }}</span></li>
+  </a>
+  {%- endif -%}
+  {%- if site.social.instagram_username -%}
+  <a href="https://www.instagram.com/{{ site.social.instagram_username| cgi_escape | escape }}"><li><i class="fab fa-instagram"></i>
+    <span class="username">{{ site.social.instagram_username| escape }}</span></li>
+  </a>
+  {%- endif -%}
   <!-- {%- if site.linkedin_username -%}<li><a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg> <span class="username">{{ site.linkedin_username| escape }}</span></a></li>{%- endif -%} -->
 </ul>
