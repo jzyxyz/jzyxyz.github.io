@@ -25,17 +25,23 @@ include_to_nav: true
   <h2>Skills</h2>
   <div class="rule"></div>
   <div class="item">
-    <h3>Code&nbsp;&nbsp;</h3>
     <h4>
       <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
+        <li>MERN Stack(MongoDB/Express.js/React/NodeJS)</li>
+        <li>Javascript</li>
+        <li>Java</li>
         <li>Bash</li>
       </ul>
     </h4>
   </div>
   
+  <h2>Experiences</h2>
+  <div class="rule"></div>
+  <div class="item">
+    <h3>Software Engineer @ EuSOFT, Shanghai, China</h3>
+    <h4>Summer 2017</h4>
+  </div>
+
   <h2>Fun Stuff</h2>
   <div class="rule"></div>
   <div class="item">
